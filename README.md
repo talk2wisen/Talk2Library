@@ -14,6 +14,9 @@ You also can manually install this library by creating a folder named "libraries
 
 ## Requirements ##
 
+### Low-Power ###
+The Talk² Library requires the Low-Power third-party library. The library can be installed using the Arduino IDE Library manager, just search for "power management". The library is also available at https://github.com/rocketscream/Low-Power and a recent copy has been included inside the "extras" directory of the Talk² Library.
+
 ### RadioHead ###
 The Talk² Library requires the RadioHead third-party library. The latest version can be downloaded from http://www.airspayce.com/mikem/arduino/RadioHead/. The documentation is very comprehensive and can be accessed on the same Website. Additionally a recent copy of the RadioHead library is also available inside the "extras" directory on the Talk² Library for convenience.
 
