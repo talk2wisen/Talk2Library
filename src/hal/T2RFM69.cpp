@@ -1,5 +1,5 @@
 /*
- * Talk² RFM69 - Extension Library
+ * Talk2 RFM69 - Extension Library
  * http://talk2.wisen.com.au
  *
  *

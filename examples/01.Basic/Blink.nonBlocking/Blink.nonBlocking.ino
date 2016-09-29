@@ -1,8 +1,8 @@
 /*
- * Talk² Example: Blink - Non-Blocking
+ * Talk2 Example: Blink - Non-Blocking
  * http://talk2.wisen.com.au
  *
- * This example demonstrate how you can use the Talk² Library to perform
+ * This example demonstrate how you can use the Talk2 Library to perform
  * a non-blocking LED Blink using the LED HAL and the Task Utility.
  * 
  * - The BLUE LED will run using the LED HAL

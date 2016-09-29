@@ -1,5 +1,5 @@
 /*
- * Talk² Whisper Node AVR Main Library
+ * Talk2 Whisper Node AVR Main Library
  * http://talk2.wisen.com.au
  *
  *

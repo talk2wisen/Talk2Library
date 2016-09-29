@@ -1,12 +1,12 @@
 /*
- * Talk² Example: Voltage - Node
+ * Talk2 Example: Voltage - Node
  * http://talk2.wisen.com.au
  *
  * This example demonstrate how to send a message, in this case the voltage
  * readings from the Power Supply and the Battery, to another node.
  * 
  * - This example works together with "Voltage - Base"
- * - The messages are formatted using the Talk² Message frame
+ * - The messages are formatted using the Talk2 Message frame
  * - Remember to adjust the frequency and TX Power to match your board
  *
  *  Copyright 2015-2016 by Mike Musskopf.

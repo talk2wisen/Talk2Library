@@ -1,5 +1,5 @@
 /*
- * Talk² Utility Library
+ * Talk2 Utility Library
  * http://talk2.wisen.com.au
  *
  *

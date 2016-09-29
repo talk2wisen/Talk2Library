@@ -1,5 +1,5 @@
 /*
- * Talk² AVR Non-Blocking LED Library
+ * Talk2 AVR Non-Blocking LED Library
  * http://talk2.wisen.com.au
  *
  *

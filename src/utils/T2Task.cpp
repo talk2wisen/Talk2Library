@@ -1,5 +1,5 @@
 /*
- * Talk² AVR Task Scheduler Library
+ * Talk2 AVR Task Scheduler Library
  * http://talk2.wisen.com.au
  *
  *

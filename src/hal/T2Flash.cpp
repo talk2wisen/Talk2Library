@@ -1,5 +1,5 @@
 /*
- * Talk² AVR SPI Flash Library
+ * Talk2 AVR SPI Flash Library
  * http://talk2.wisen.com.au
  *
  *
@@ -95,6 +95,15 @@ bool T2Flash::powerUp()
 {
   this->beginTransaction();
   SPI.transfer(T2FLASH_REG__POWER_UP);
+  this->endTransaction();
+
+  return true;
+}
+
+bool T2Flash::powerDown()
+{
+  this->beginTransaction();
+  SPI.transfer(T2FLASH_REG__POWER_DOWN);
   this->endTransaction();
 
   return true;

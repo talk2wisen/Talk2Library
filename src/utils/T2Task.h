@@ -1,16 +1,16 @@
 /*
- * Talk² AVR Task Scheduler Library
+ * Talk2 AVR Task Scheduler Library
  * http://talk2.wisen.com.au
  *
- * This file is part of Talk² AVR Task Scheduler Library.
+ * This file is part of Talk2 AVR Task Scheduler Library.
 
- * Talk² AVR Task Scheduler Library
+ * Talk2 AVR Task Scheduler Library
  * is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * Talk² AVR Task Scheduler Library
+ * Talk2 AVR Task Scheduler Library
  * is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the

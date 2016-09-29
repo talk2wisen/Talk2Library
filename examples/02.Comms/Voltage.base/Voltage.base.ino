@@ -1,5 +1,5 @@
 /*
- * Talk² Example: Voltage - Base
+ * Talk2 Example: Voltage - Base
  * http://talk2.wisen.com.au
  *
  * This example demonstrate how to receive a message and print on the Serial.
@@ -7,7 +7,7 @@
  * and the Battery, sent by a remote node.
  * 
  * - This example works together with "Voltage - Node"
- * - The messages are formatted using the Talk² Message frame
+ * - The messages are formatted using the Talk2 Message frame
  * - Remember to adjust the frequency and TX Power to match your board
  *
  *  Copyright 2015-2016 by Mike Musskopf.

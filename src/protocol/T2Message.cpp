@@ -1,5 +1,5 @@
 /*
- * Talk² Protocol - Message Library
+ * Talk2 Protocol - Message Library
  * http://talk2.wisen.com.au
  *
  *

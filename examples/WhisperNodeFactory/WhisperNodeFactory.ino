@@ -1,9 +1,9 @@
 /*
- * Talk² Whisper Node AVR Factory Firmware
+ * Talk2 Whisper Node AVR Factory Firmware
  * http://talk2.wisen.com.au
  *
  * This is the default program shipped with the
- * Talk² Whisper Node AVR boards.
+ * Talk2 Whisper Node AVR boards.
  *
  * The program is designed to provide:
  *  - Self-testing
