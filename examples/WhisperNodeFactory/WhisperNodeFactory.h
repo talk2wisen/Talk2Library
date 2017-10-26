@@ -27,5 +27,6 @@
 //Includes
 #include <Arduino.h>
 #include <T2WhisperNode.h>
+#include <utils/T2Firmware.h>
 
 #endif /* WHISPERNODEFACTORY_H_ */

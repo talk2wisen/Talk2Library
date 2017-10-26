@@ -26,17 +26,28 @@
  *
  */
 #include <T2WhisperNode.h>
+
+/* You need to configure the Whisper Node Version */
+#define T2_WPN_BOARD T2_WPN_VER_RF69
+//#define T2_WPN_BOARD T2_WPN_VER_LORA
+
+#define RADIO_FREQUENCY 916.0
+#define RADIO_TX_POWER 13
+#define RADIO_ENCRYPTION_KEY { 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F } // Only used by RF69
+
+#if T2_WPN_BOARD == T2_WPN_VER_RF69
 #include <RH_RF69.h>
+RH_RF69 myRadio;
+#elif T2_WPN_BOARD == T2_WPN_VER_LORA
+#include <RH_RF95.h>
+RH_RF95 myRadio;
+#endif
 
 // LED
 T2Led myLedBlue(T2_WPN_LED_1);
 T2Led myLedYellow(T2_WPN_LED_2);
 
-// RFM69 Radio
-#define RADIO_FREQUENCY 916.0
-#define RADIO_TX_POWER 13
-#define RADIO_ENCRYPTION_KEY { 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F }
-RH_RF69 myRadio;
+// Radio
 uint8_t radioBuf[(T2_MESSAGE_HEADERS_LEN + T2_MESSAGE_MAX_DATA_LEN)];
 
 // T2 Message
@@ -59,11 +70,12 @@ void setup()
 
   // Radio
   myRadio.init();
-  myRadio.setModemConfig(RH_RF69::FSK_Rb125Fd125);
   myRadio.setFrequency(RADIO_FREQUENCY);
+  myRadio.setTxPower(RADIO_TX_POWER);
+#if T2_WPN_BOARD == T2_WPN_VER_RF69
   uint8_t myRadioEncryptionKey[] = RADIO_ENCRYPTION_KEY;
   myRadio.setEncryptionKey(myRadioEncryptionKey);
-  myRadio.setTxPower(RADIO_TX_POWER);
+#endif  
 
   // Stand-alone Task
   myTaskVoltage.runInterval(1000);   // Task will tun every 1000 milliseconds

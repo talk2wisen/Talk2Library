@@ -24,6 +24,10 @@
 #ifndef T2WHISPERNODE_H_
 #define T2WHISPERNODE_H_
 
+/* Board Models and Versions */
+#define T2_WPN_VER_RF69 1
+#define T2_WPN_VER_LORA 2
+
 /* MCU */
 #define T2_MCU_BOOTLOADER_VER_ADDR     0x7FFE // Internal Memory Address where we store the bootloader version
 #define T2_MCU_BOOTLOADER_EEPROM_ADDR  0x03E0 // EEPROM Memory Address where the Bootloader configuration is located
@@ -40,7 +44,7 @@
 #define T2_WPN_VBAT_CONTROL     A0    // P-Mosfet to connect/disconnect the Battery Voltage Divider
 #define T2_WPN_VBAT_MAX         7282  // Max millivolts when using RTop 562K and RBot 100K resistors @ 1.1V (internal) as VRef
 #define T2_WPN_VIN_VOLTAGE      A7    // Always connected to the Analog 7
-#define T2_WPN_VIN_CONTROL      0     // Not Used
+#define T2_WPN_VIN_CONTROL      A0    // Sames as the VBAT
 #define T2_WPN_VIN_REFERENCE    7282  // Max millivolts when using RTop 562K and RBot 100K resistors @ 1.1V (internal) as VRef
 
 /* Flash */
@@ -71,7 +75,6 @@
 #include <hal/T2DataBuffer.h>
 #include <protocol/T2Message.h>
 #include <utils/T2Task.h>
-#include <utils/T2Firmware.h>
 
 class T2WhisperNode
 {

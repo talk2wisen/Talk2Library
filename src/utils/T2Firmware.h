@@ -26,7 +26,6 @@
 
 /* External Libraries */
 #include <Arduino.h>
-#include <RH_RF69.h>
 #include <avr/wdt.h>
 
 /* Additional Libraries */
@@ -38,8 +37,14 @@
 /* SPI Flash */
 extern T2Flash myFlash;
 
-/* RFM69 Radio */
+/* Radio */
+#if T2_WPN_BOARD == T2_WPN_VER_RF69
+#include <RH_RF69.h>
 extern RH_RF69 myRadio;
+#elif T2_WPN_BOARD == T2_WPN_VER_LORA
+#include <RH_RF95.h>
+extern RH_RF95 myRadio;
+#endif
 extern uint8_t radioBuf[(T2_MESSAGE_HEADERS_LEN + T2_MESSAGE_MAX_DATA_LEN)];
 
 /* T2 Message */

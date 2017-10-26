@@ -27,8 +27,19 @@
 #include <T2WhisperNode.h>
 #include <LowPower.h>
 
-T2Flash myFlash;
+/* You need to configure the Whisper Node Version */
+#define T2_WPN_BOARD T2_WPN_VER_RF69
+//#define T2_WPN_BOARD T2_WPN_VER_LORA
+
+#if T2_WPN_BOARD == T2_WPN_VER_RF69
+#include <RH_RF69.h>
 RH_RF69 myRadio;
+#elif T2_WPN_BOARD == T2_WPN_VER_LORA
+#include <RH_RF95.h>
+RH_RF95 myRadio;
+#endif
+
+T2Flash myFlash;
 
 void setup()
 {
