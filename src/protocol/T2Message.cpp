@@ -43,7 +43,7 @@ T2Message::~T2Message()
 void T2Message::setSerializedMessage(uint8_t * msg, uint8_t len)
 {
 
-  //Extract Headers from the first 5 bytes
+  // Extract Headers from the first 5 bytes
   this->idx = (msg[0] & 0x1C) >> 2;
   this->cmd = msg[0] & 0x03;
   this->sdx = msg[1];
@@ -51,6 +51,13 @@ void T2Message::setSerializedMessage(uint8_t * msg, uint8_t len)
   this->dst = msg[3];
   this->rtr = (msg[4] & 0x80) >> 7;
   this->len = msg[4] & 0x7F;
+  
+  // Check the incoming message isn't bigger than the expected.
+  // Otherwise, use T2_MESSAGE_MAX_DATA_LEN
+  if (this->len > T2_MESSAGE_MAX_DATA_LEN)
+  {
+    this->len = T2_MESSAGE_MAX_DATA_LEN;
+  }
 
   //Extract the Data
   memset(this->data, 0, sizeof(this->data));
