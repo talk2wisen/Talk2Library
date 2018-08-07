@@ -56,7 +56,7 @@
 /* Radio Module */
 #define T2_WPN_RADIO_INT        2     // Hardware Interrupt
 #define T2_WPN_RADIO_RESET      7     // Hardware Reset, pulled LOW by default. Turn it HIGH for a 1ms and release. Wait 5ms to reconfigure the radio
-#define T2_WPN_RADIO_SPI_CS     8     // Chip Select
+#define T2_WPN_RADIO_SPI_CS     10    // Chip Select
 #define T2_WPN_RADIO_SPI_MOSI   11
 #define T2_WPN_RADIO_SPI_MISO   12
 #define T2_WPN_RADIO_SPI_SCK    13
